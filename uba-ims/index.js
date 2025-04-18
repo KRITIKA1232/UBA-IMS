@@ -7,7 +7,7 @@ const program = new Command();
 const DATA_FILE = path.join(__dirname, 'users.json');
 
 // Ensure users.json exists
-if (!fs.existsSync(DATA_FILE)) {
+if (!fs.existsSyncDATA_FILE()) {
     fs.writeFileSync(DATA_FILE, JSON.stringify([]));
 }
 

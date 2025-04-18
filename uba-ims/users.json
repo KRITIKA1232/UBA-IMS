@@ -1,9 +1,5 @@
 [
   {
-    "fname": "Kriteeka",
-    "lname": "Shrestha"
-  },
-  {
     "fname": "ANUSKA",
     "lname": "Sombid"
   },
@@ -18,5 +14,9 @@
   {
     "fname": "CAT",
     "lname": "Shrestha"
+  },
+  {
+    "fname": "Aaku",
+    "lname": "Don"
   }
 ]
