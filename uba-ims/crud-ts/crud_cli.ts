@@ -9,6 +9,7 @@ const DATA_FILE = path.join(__dirname, 'users.json');
 interface User {
   fname: string;
   lname: string;
+  
 }
 
 // Ensure users.json exists
