@@ -1,43 +1,12 @@
 import express, { Request, Response } from 'express';
-import * as fs from 'fs';
-import * as path from 'path';
+import { getUsers, saveUsers, User } from './helper';
 
 // Constants
 const app = express();
 const PORT = 3000;
-const DATA_FILE = path.join(__dirname, 'users.json');
 
 // Middleware
 app.use(express.json());
-
-// Define the User interface
-interface User {
-  fname: string;
-  lname: string;
-}
-
-// Helper Functions
-const getUsers = (): User[] => {
-  try {
-    const data = fs.readFileSync(DATA_FILE, 'utf-8');
-
-    // Check for empty file
-    if (!data.trim()){
-      console.error("The JSON file is empty.");
-      return [];
-    }
-
-    return JSON.parse(data) as User[];
-  } catch (error) {
-    console.error("Error reading users file:", (error as Error).message);
-    return [];
-  }
-};
-
-const saveUsers = (users: User[]): void => {
-  fs.writeFileSync(DATA_FILE, JSON.stringify(users, null, 2));
-};
-
 
 //Root route
 app.get('/', (req: Request, res: Response) => {
@@ -59,7 +28,6 @@ app.get('/users', (req: Request, res: Response) => {
     const users = getUsers();
     res.status(200).json(users);
 });
-
 
 
 app.delete('/users/:fname', (req: Request, res: Response) => {
