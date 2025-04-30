@@ -2,7 +2,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 // const data_file = path.join(__dirname, '../server/users.json');
-const DATA_FILE = path.join(__dirname, '../users.json');
+const DATA_FILE = path.join(__dirname, '../../users.json');
 
 
 // Define the User interface
