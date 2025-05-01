@@ -1,13 +1,5 @@
 [
   {
-    "fname": "Sinex",
-    "lname": "shrestha"
-  },
-  {
-    "fname": "oxide",
-    "lname": "pradhan"
-  },
-  {
     "fname": "akriti",
     "lname": "stha"
   },
@@ -37,6 +29,34 @@
   },
   {
     "fname": "Muna",
+    "lname": "madan"
+  },
+  {
+    "fname": "Muna",
     "lname": "achraya"
+  },
+  {
+    "fname": "Muna",
+    "lname": "achraya"
+  },
+  {
+    "fname": "Mun",
+    "lname": "achraya"
+  },
+  {
+    "fname": "Postman",
+    "lname": "chetri"
+  },
+  {
+    "fname": "john",
+    "lname": "man"
+  },
+  {
+    "fname": "john",
+    "lname": "man"
+  },
+  {
+    "fname": "Rajesh",
+    "lname": "Hamal"
   }
 ]
