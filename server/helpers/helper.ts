@@ -28,7 +28,7 @@ export const getUsers = (): User[] => {
     console.error("Error reading users file:", (error as Error).message);
     return [];
   }
-};
+};  
 
 
 //function to save users 

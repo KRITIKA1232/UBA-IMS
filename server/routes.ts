@@ -9,7 +9,7 @@ import {
 //create an express router
 const router = express.Router();
 
-//defind routes
+//define routes
 router.get('/', (_req:Request, res:Response) => {
     res.send('CRUD API');
 });

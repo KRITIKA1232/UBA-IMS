@@ -32,6 +32,7 @@ User.init(
     },
     lname: {
       type: DataTypes.STRING,
+
       allowNull: false,
     },
   },
@@ -42,4 +43,4 @@ User.init(
   }
 );
 
-export default User;
+export default User; 

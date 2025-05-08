@@ -1,22 +1,3 @@
-// import { Sequelize } from 'sequelize';
-
-// const sequelize = new Sequelize('UBAIMS', 'root', 'root', {
-//   host: 'localhost',
-//   dialect: 'mysql',
-// });
-
-// const connectDB = async () => {
-//   try {
-//     await sequelize.authenticate();
-//     console.log(' Database Connected Successfully');
-//   } catch (error) {
-//     console.error(' Database Connection Failed:', error);
-//     process.exit(1);
-//   }
-// };
-
-// export { sequelize, connectDB };
-
 
 import { Sequelize } from 'sequelize';
 import dotenv from 'dotenv';
