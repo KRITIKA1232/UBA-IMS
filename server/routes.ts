@@ -6,7 +6,7 @@ import {
   updateUser,
 } from './controllers/userControllers';//import controller functions
 
-//create an express router
+//create an express routera
 const router = express.Router();
 
 //define routes
