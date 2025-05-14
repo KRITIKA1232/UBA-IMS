@@ -19,7 +19,7 @@ export const getUsers = (): User[] => {
 
     // Check for empty file
     if (!data.trim()){
-      console.error("The JSON file is empty.");
+      console.warn("The JSON file is empty.");
       return [];
     }
 
@@ -33,6 +33,15 @@ export const getUsers = (): User[] => {
 
 //function to save users 
 export const saveUsers = (users: User[]): void => {
+  try{
+    if(users.length === 0){
+      // console.warn("Cannot save an empty user list.");
+      fs.writeFileSync(DATA_FILE, '[]');
+      return;
+    }
     fs.writeFileSync(DATA_FILE, JSON.stringify(users, null, 2));
+  } catch(error){
+    console.error("Error writing to users file:", (error as Error).message);  
+  }
   };
   

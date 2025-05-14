@@ -75,6 +75,17 @@ describe('CRUD API', () => {
 
 //unit test for helper functions 
 describe('Helper Functions', () => {
+    it('should return an empty array for empty JSON file', () => {
+        const users = getUsers();
+        expect(users).toEqual([]);
+    }
+    );
+    
+    it('should return an empty array for invalid JSON file', () => {
+        const users = getUsers();
+        expect(users).toEqual([]);
+    });
+
     it('should read users from JSON file', () => {
         const users = getUsers();
         expect(users).toBeInstanceOf(Array);
