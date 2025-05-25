@@ -2,13 +2,13 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 // const data_file = path.join(__dirname, '../server/users.json');
-const DATA_FILE = path.join(__dirname, '../../users.json');
+const DATA_FILE = path.join(__dirname, '../../../users.json');
 
 
 // Define the User interface
 export interface User {
-    fname: string;
-    lname: string;
+  fname: string;
+  lname: string;
 }
 
 
@@ -18,7 +18,7 @@ export const getUsers = (): User[] => {
     const data = fs.readFileSync(DATA_FILE, 'utf-8');
 
     // Check for empty file
-    if (!data.trim()){
+    if (!data.trim()) {
       console.warn("The JSON file is empty.");
       return [];
     }
@@ -28,20 +28,19 @@ export const getUsers = (): User[] => {
     console.error("Error reading users file:", (error as Error).message);
     return [];
   }
-};  
+};
 
 
 //function to save users 
 export const saveUsers = (users: User[]): void => {
-  try{
-    if(users.length === 0){
+  try {
+    if (users.length === 0) {
       // console.warn("Cannot save an empty user list.");
       fs.writeFileSync(DATA_FILE, '[]');
       return;
     }
     fs.writeFileSync(DATA_FILE, JSON.stringify(users, null, 2));
-  } catch(error){
-    console.error("Error writing to users file:", (error as Error).message);  
+  } catch (error) {
+    console.error("Error writing to users file:", (error as Error).message);
   }
-  };
-  
+};

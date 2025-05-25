@@ -2,4 +2,7 @@ node_modules/
 package-lock.json
 uba-ims/node_modules
 uba-ims/package-lock.json
+jest.config.ts
+tsconfig.json
 .env
+coverage/

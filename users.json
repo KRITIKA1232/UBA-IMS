@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "fname": "John",
+    "lname": "Doe"
+  },
+  {
+    "fname": "Jane",
+    "lname": "Smith"
+  },
+  {
+    "fname": "Updated",
+    "lname": "User"
+  }
+]
