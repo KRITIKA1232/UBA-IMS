@@ -6,3 +6,5 @@ jest.config.ts
 tsconfig.json
 .env
 coverage/
+app/src/**/*.js
+dist/
